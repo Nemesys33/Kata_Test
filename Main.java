@@ -142,37 +142,19 @@ public class Main {
 			i -= 10;
 		}
 
-		switch (i) {
-		case 0:
-			str.append("");
-			break;
-		case 1:
-			str.append("I");
-			break;
-		case 2:
-			str.append("II");
-			break;
-		case 3:
-			str.append("III");
-			break;
-		case 4:
-			str.append("IV");
-			break;
-		case 5:
+		if(i>=5) {
 			str.append("V");
-			break;
-		case 6:
-			str.append("VI");
-			break;
-		case 7:
-			str.append("VII");
-			break;
-		case 8:
-			str.append("VIII");
-			break;
-		case 9:
-			str.append("IX");
-			break;
+			i-=5;
+		}
+		
+		if(i>=4) {
+			str.append("IV");
+			i-=4;
+		}
+		
+		while(i>0) {
+			str.append("I");
+			i--;
 		}
 		return str.toString();
 	}
