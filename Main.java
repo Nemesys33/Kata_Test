@@ -141,6 +141,11 @@ public class Main {
 			str.append("X");
 			i -= 10;
 		}
+		
+		if(i>=9) {
+			str.append("IX");
+			i-=9;
+		}
 
 		if(i>=5) {
 			str.append("V");
